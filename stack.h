@@ -1,18 +1,17 @@
 #ifndef STACK_H
 #define STACK_H
-class Stack 
-{
+class Stack{
 private:
     int* arr;
     int peak;
     int capacity;
-
 public:
     Stack(int size);
     Stack();
     Stack(const Stack& other);
     ~Stack();
     Stack& operator=(const Stack& other);
+    void move(Stack& other);
     void push(int value);
     int pop();
     int top() const;
